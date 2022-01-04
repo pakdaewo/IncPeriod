@@ -1,0 +1,1 @@
+IncPeriod <- function(...) UseMethod("IncPeriod")

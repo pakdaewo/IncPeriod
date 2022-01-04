@@ -1,0 +1,1 @@
+cplot <- function(...) UseMethod("cplot")

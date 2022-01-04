@@ -1,0 +1,27 @@
+Package: IncPeriod
+Type: Package
+Title: Incubation Period with Uncertain Onset of Infection and Symptoms
+Version: 0.1.0
+Authors@R: c(
+    person(given = "Daewoo", family = "Pak", email = "dpak@yonsei.ac.kr", role = c("aut", "cre")),
+    person(given = "Jing", family = "Ning", email = "jning@mdanderson.org", role = c("aut")),
+    person(given = "Yu", family = "Shen", email = "yshen@mdanderson.org", role = c("aut"))
+    )
+Maintainer: Daewoo Pak <dpak@yonsei.ac.kr>
+Description: Estimate the incubation period and its association with risk factors
+    when the exact dates of infection and symptoms’ onset may not be observed.
+    The generalized odds-rate class of regression models, which is one of the 
+    sufficiently general parameteric classes, is employed for modeling the 
+    incubation period for infectious diseases. The observed data must include
+    the period of potential exposure and times for symptom onset or hospitalization.
+License: GPL (>= 3)
+Encoding: UTF-8
+LazyData: true
+Depends: R (>= 4.0.0)
+Imports: numDeriv
+RoxygenNote: 7.1.1
+NeedsCompilation: no
+Packaged: 2022-01-03 11:10:33 UTC; dpak
+Author: Daewoo Pak [aut, cre],
+  Jing Ning [aut],
+  Yu Shen [aut]

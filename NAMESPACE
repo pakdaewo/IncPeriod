@@ -1,0 +1,8 @@
+exportPattern("^[[:alpha:]]+")
+S3method(IncPeriod, default)
+S3method(print, IncPeriod)
+S3method(summary, IncPeriod)
+S3method(cplot, default)
+importFrom("stats", "optim", "pnorm", "qnorm", "integrate")
+importFrom("numDeriv", "grad", "hessian")
+importFrom("graphics", "lines", "points", "axis", "legend")
