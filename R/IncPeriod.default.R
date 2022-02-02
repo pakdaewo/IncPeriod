@@ -1,4 +1,4 @@
-IncPeriod.default <- function(date.exposure, date.onset, date.hosp, X, ...) {
+IncPeriod.default <- function(date.exposure, date.onset, date.hosp, X, ini.val = NULL, ...) {
 
   match.call()
 
@@ -24,7 +24,11 @@ IncPeriod.default <- function(date.exposure, date.onset, date.hosp, X, ...) {
   p <- ncol(x)
   dat <- as.matrix(cbind(r = r, d=d, ie = ind_exact, io = ind_onset, x))
 
-  fit <- optim(par = c(0.01, 0.01, -0.01, rep(0, p)), fn = fnlik_general, dat = dat, control = list(maxit = 10000))
+  if (is.null(ini.val)) {
+    ini.val <- c(0.01, 0.01, -0.001, rep(0, p))
+  } 
+  
+  fit <- optim(par = ini.val, fn = fnlik_general, dat = dat, control = list(maxit = 10000))
   est <- fit$par
   hess <- hessian(func = fnlik_general, x = est, dat = dat)
   se <-  sqrt(diag(solve(hess)))
