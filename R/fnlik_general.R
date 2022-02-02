@@ -27,7 +27,7 @@ fnlik_general <- function(par, dat, nosum = FALSE) {
 
   # Category 1
   ind_c1 <- (ie == 0) & (io == 1)
-  if(length(ind_c1) > 0) {
+  if(any(ind_c1)) {
     r_c1 <- ra[ind_c1]
     d_c1 <- da[ind_c1]
     expzb_c1 <- expzb[ind_c1]
@@ -38,7 +38,7 @@ fnlik_general <- function(par, dat, nosum = FALSE) {
 
   # Category 2
   ind_c2 <- (ie == 0) & (io == 0)
-  if(length(ind_c2) > 0) {
+  if(any(ind_c2)) {
     r_c2 <- ra[ind_c2]
     d_c2 <- da[ind_c2]
     expzb_c2 <- expzb[ind_c2]
@@ -53,7 +53,7 @@ fnlik_general <- function(par, dat, nosum = FALSE) {
 
   # Category 3
   ind_c3 <- (ie == 1) & (io == 1)
-  if(length(ind_c3) > 0) {
+  if(any(ind_c3)) {
     r_c3 <- ra[ind_c3]
     d_c3 <- da[ind_c3]
     expzb_c3 <- expzb[ind_c3]
@@ -64,7 +64,7 @@ fnlik_general <- function(par, dat, nosum = FALSE) {
 
   # Category 4
   ind_c4 <- (ie == 1) & (io == 0)
-  if(length(ind_c4) > 0) {
+  if(any(ind_c4)) {
     r_c4 <- ra[ind_c4]
     d_c4 <- da[ind_c4]
     expzb_c4 <- expzb[ind_c4]
